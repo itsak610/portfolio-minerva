@@ -1,0 +1,146 @@
+header#masthead
+    .loader
+        .loadcontainer
+            .side
+                img(src='/img/MINERVA.png' alt='MINERVA')
+
+    .container            
+        .phonenavdiv
+            img#navswitch3.mob-logo(src='/wp-content/themes/theme_mob_1.2/img/MINERVA__1_-removebg-preview.png', alt='MINERVA')
+            #mobilenavdiv.mobile-menu-toggle.js-toggle-menu.hamburger-menu(onclick='navfunction()')
+                span.menu-item
+                span.menu-item
+                span.menu-item
+
+
+        if currentUser
+            if currentUser.username == 'admin'
+                nav.desktop-nav
+                    ul
+                        .column3.left3
+                            a.handletter(href='/')
+                                img#navswitch1(src='/wp-content/themes/theme_mob_1.2/img/MINERVA__1_-removebg-preview.png', alt='MINERVA')
+                        .column3.middle3
+                            li
+                                a.navswitch2(href='/')#homenav Home
+                            li 
+                                a.navswitch2(href='/team')#teamnav Team
+                            li 
+                                a.navswitch2(href='/firm')#firmnav Firm
+                            li
+                                a.navswitch2(href='/services')#servicesnav Services
+                            li
+                                a.navswitch2(href='/contact')#contactnav Contact
+                        .column3.right3
+                            li 
+                                a.navswitch2(href='/admin')#dashboardnav Admin
+                            li
+                                a.navswitch2(href='/logout') Logout 
+            else
+                nav.desktop-nav
+                    ul
+                        .row3
+                            .column3.left3
+                                a.handletter(href='/')
+                                    img#navswitch1(src='/wp-content/themes/theme_mob_1.2/img/MINERVA__1_-removebg-preview.png', alt='MINERVA')
+                            .column3.middle3
+                                li
+                                    a.navswitch2(href='/')#homenav Home
+                                li 
+                                    a.navswitch2(href='/team')#teamnav Team
+                                li 
+                                    a.navswitch2(href='/firm')#firmnav Firm
+                                li
+                                    a.navswitch2(href='/services')#servicesnav Services
+                                li
+                                    a.navswitch2(href='/contact')#contactnav Contact
+                            .column3.right3
+                                li 
+                                    a.navswitch2(href='/dashboard')#dashboardnav Dashboard
+                                li
+                                    a.navswitch2(href='/logout') Logout 
+        else
+            nav.desktop-nav
+                ul
+                    .row3
+                        .column3.left3
+                            a.handletter(href='/')
+                                img#navswitch1(src='/wp-content/themes/theme_mob_1.2/img/MINERVA__1_-removebg-preview.png', alt='MINERVA')
+                        .column3.middle3
+                            li
+                                a.navswitch2(href='/')#homenav Home
+                            li 
+                                a.navswitch2(href='/team')#teamnav Team
+                            li 
+                                a.navswitch2(href='/firm')#firmnav Firm
+                            li
+                                a.navswitch2(href='/services')#servicesnav Services
+                            li
+                                a.navswitch2(href='/contact')#contactnav Contact
+                        .column3.right3
+                            li
+                                a.navswitch2(href='/login')#loginnav Login
+                            li
+                                a.navswitch2(href='/register')#registernav Register
+        nav#nav.mobile-nav.hidden
+            ul#hidenav2
+                if currentUser
+                    if currentUser.username == 'admin'
+                        li
+                            a.navswitch2(href='/')#homenav Home
+                        li 
+                            a.navswitch2(href='/team')#teamnav Team
+                        li 
+                            a.navswitch2(href='/firm')#firmnav Firm
+                        li
+                            a.navswitch2(href='/services')#servicesnav Services
+                        li
+                            a.navswitch2(href='/contact')#contactnav Contact
+                        li 
+                            a.navswitch2(href='/admin')#dashboardnav Admin
+                        li
+                            a.navswitch2(href='/logout') Logout
+                    else
+                        li
+                            a.navswitch2(href='/')#homenav Home
+                        li 
+                            a.navswitch2(href='/dashboard')#dashboardnav Dashboard
+                        li 
+                            a.navswitch2(href='/team')#teamnav Team
+                        li 
+                            a.navswitch2(href='/firm')#firmnav Firm
+                        li
+                            a.navswitch2(href='/services')#servicesnav Services
+                        li
+                            a.navswitch2(href='/contact')#contactnav Contact
+                        li
+                            a.navswitch2(href='/logout') Logout
+                else
+                    li
+                        a(href='/')#homenav Home
+                    li 
+                        a.navswitch2(href='/team')#teamnav Team
+                    li 
+                        a.navswitch2(href='/firm')#firmnav Firm
+                    li
+                        a.navswitch2(href='/services')#servicesnav Services
+                    li
+                        a.navswitch2(href='/contact')#contactnav Contact
+                    li
+                        a.navswitch2(href='/login')#loginnav Login
+                    li
+                        a.navswitch2(href='/register')#registernav Register
+    script.
+        function hideit() {
+            loader.style.display = 'none'
+        }
+        var loader = document.querySelector(".loader");
+        var side = document.querySelector(".side");
+        function loadFunction() {
+            loader.className += " hidden1"; // class "loader hidden"
+        }
+        window.addEventListener("load", function() {
+            side.className += " outro"
+            setTimeout(loadFunction, 500);
+            setTimeout(hideit, 1000);
+        });

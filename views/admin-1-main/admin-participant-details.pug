@@ -1,0 +1,129 @@
+extends layout
+
+block content
+
+    .card.leaderboard
+        h1.form-title.center Participant Details
+        br
+        each team, index in teams
+            if team.username != currentUser.username
+                p Participant Username - 
+                    b #{team.username}
+                p Participant Type - 
+                    b #{team.userType}
+                p Participant Name - 
+                    b #{team.name}
+                p Participant Committee - 
+                    b #{team.committee}
+                p Participant Code - 
+                    b #{team.committeeCode}            
+                p Participant Allotment - 
+                    b #{team.allotment}.
+                p Participant Email - 
+                    b #{team.email}            
+                p Participant Number - 
+                    b #{team.number}
+                p Time Registered - 
+                    b #{team.time}
+                p Payment ID - 
+                    b #{team.paymentID}
+                br
+                br
+                if currentUser.userType == 'admin1'
+                    - var temp1 = '/admin/manage/entries/' + team.username;
+                    a(href=temp1) EDIT
+    include footer
+    script.
+        $(document).ready(function () {
+            document.getElementById("navswitch1").classList.add("navswitch1")
+            document.getElementById("navswitch3").classList.add("navswitch1")
+            document.getElementsByClassName("menu-item")[0].classList.add("navham")
+            document.getElementsByClassName("menu-item")[1].classList.add("navham")
+            document.getElementsByClassName("menu-item")[2].classList.add("navham")
+            document.getElementsByClassName("navswitch2")[0].classList.add("navswitch2color")
+            document.getElementsByClassName("navswitch2")[1].classList.add("navswitch2color")
+            document.getElementsByClassName("navswitch2")[2].classList.add("navswitch2color")
+            document.getElementsByClassName("navswitch2")[3].classList.add("navswitch2color")
+            document.getElementsByClassName("navswitch2")[4].classList.add("navswitch2color")
+            document.getElementsByClassName("navswitch2")[5].classList.add("navswitch2color")
+            document.getElementsByClassName("navswitch2")[6].classList.add("navswitch2color")
+            document.getElementsByClassName("active")[0].classList.add("navswitch3color")
+
+            $(window).scroll(function(){
+                var ScrollTop = parseInt($(window).scrollTop());
+                if (ScrollTop > 800 && ScrollTop < 3200) {
+                    document.getElementById("navswitch1").classList.add("navswitch1")
+                    document.getElementById("navswitch3").classList.add("navswitch1")
+                    document.getElementsByClassName("menu-item")[0].classList.add("navham")
+                    document.getElementsByClassName("menu-item")[1].classList.add("navham")
+                    document.getElementsByClassName("menu-item")[2].classList.add("navham")
+                    document.getElementsByClassName("navswitch2")[0].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[1].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[2].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[3].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[4].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[5].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[6].classList.add("navswitch2color")
+                    document.getElementsByClassName("active")[0].classList.add("navswitch3color")
+                }
+                else{
+                    document.getElementById("navswitch1").classList.add("navswitch1")
+                    document.getElementById("navswitch3").classList.add("navswitch1")
+                    document.getElementsByClassName("menu-item")[0].classList.add("navham")
+                    document.getElementsByClassName("menu-item")[1].classList.add("navham")
+                    document.getElementsByClassName("menu-item")[2].classList.add("navham")
+                    document.getElementsByClassName("navswitch2")[0].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[1].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[2].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[3].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[4].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[5].classList.add("navswitch2color")
+                    document.getElementsByClassName("navswitch2")[6].classList.add("navswitch2color")
+                    document.getElementsByClassName("active")[0].classList.add("navswitch3color")
+                };
+                if (ScrollTop > 1000) {
+                    document.getElementById('masthead').classList.add('navshift')
+                }
+                else{
+                    document.getElementById('masthead').classList.remove('navshift')
+                }
+            });
+        });
+
+            $(function() {
+                $('#masthead').hover(function() {
+                    var ScrollTop = parseInt($(window).scrollTop());
+                    if (ScrollTop < 850) {
+                        document.getElementById("navswitch1").classList.add("navswitch1")
+                        document.getElementById("navswitch3").classList.add("navswitch1")
+                        document.getElementsByClassName("menu-item")[0].classList.add("navham")
+                        document.getElementsByClassName("menu-item")[1].classList.add("navham")
+                        document.getElementsByClassName("menu-item")[2].classList.add("navham")
+                        document.getElementsByClassName("navswitch2")[0].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[1].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[2].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[3].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[4].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[5].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[6].classList.add("navswitch2color")
+                        document.getElementsByClassName("active")[0].classList.add("navswitch3color")
+                    }
+                }, function() {
+                    var ScrollTop = parseInt($(window).scrollTop());
+                    if (ScrollTop < 850) {
+                        document.getElementById("navswitch1").classList.add("navswitch1")
+                        document.getElementById("navswitch3").classList.add("navswitch1")
+                        document.getElementsByClassName("menu-item")[0].classList.add("navham")
+                        document.getElementsByClassName("menu-item")[1].classList.add("navham")
+                        document.getElementsByClassName("menu-item")[2].classList.add("navham")
+                        document.getElementsByClassName("navswitch2")[0].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[1].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[2].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[3].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[4].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[5].classList.add("navswitch2color")
+                        document.getElementsByClassName("navswitch2")[6].classList.add("navswitch2color")
+                        document.getElementsByClassName("active")[0].classList.add("navswitch3color")
+                    }
+                });
+            });

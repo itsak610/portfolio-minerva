@@ -1,0 +1,2 @@
+# Minerva MUN
+This website was created as a prototype for the official website for the organization Minerva Model United Nations and was also used for the registration for multiple nationwide events. It is now being used for the developer's portfolio. You can find the running website here- https://minerva-mun-portfolio.herokuapp.com

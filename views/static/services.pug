@@ -1,0 +1,277 @@
+extends layout 
+
+block content
+    style.
+        section.s8{
+            height:90vh;
+            background-image: linear-gradient(to bottom, rgba(0,0,0, 0.3),rgba(0,0,0, 0.75)), url("https://www.pitblado.com/wp-content/uploads/2020/10/contact-page-scaled.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            backdrop-filter: blur(30px);
+            background-color: #000;
+        }
+        section.s11{
+            height:50vh;
+            background: url("https://www.pitblado.com/wp-content/uploads/2020/10/where-to-next-background-2560.jpg");
+            background-repeat: no-repeat;
+            background-position-y:85%;
+            background-size: cover;
+            backdrop-filter: blur(30px);
+            background-color: #000;
+        }        
+        .leftside{
+            float:left;
+            text-align:left;
+            margin-left:150px;
+            color:#fff;
+            font-size:2vw;
+            margin-top:17vh
+        }
+        .leftside p{
+            font-size: 2vw;
+        }
+        .leftside b{
+            text-decoration: underline;
+        }
+
+
+        .s8 .titlediv{
+            display:flex;
+            flex-flow:row;
+        }
+        .titlediv{
+            display:flex;
+            flex-flow:column;
+        }
+        .title{
+            padding-right:2vw;
+        }
+        section.s9{
+            height:max-content;
+        }
+        .s11 .linky{
+            cursor:pointer;
+        }
+        .s11 b{
+            text-decoration:none;
+        }
+        section.s10{
+            height:max-content;
+        }
+        .s9 p{
+            color:#687780;
+        }
+        .s9 b{
+            color:#000;
+            text-decoration:none;
+            font-weight:bolder;
+        }
+        .pdiv1{
+            display:flex;
+            justify-content:center
+        }
+        .pdiv2{
+            width:65%;
+            padding-bottom:10vh;
+        }
+        .pdiv2 p{
+            font-size:0.67em;
+            color:#000;
+        }
+        .imagetab1{
+            margin-top:20vh;
+            display:flex;
+            flex-flow:row;
+            justify-content: space-evenly;
+            align-content:center;
+            width:100vw;
+        }
+        .imagediv{
+            width:20vw;
+        }
+        .imagepart img{
+            width:18vw;
+            height:18vw;
+        }
+        .imagepart img:hover{
+            opacity: 0.5;        
+        }
+        .textpart h1{
+            font-size:2em;
+        }
+        .textpart p{
+            letter-spacing:0.001em;
+            color: #697881;
+            font-size:1.2em;
+        }
+        .h8container{
+            font-size:0.8em;
+            width:100%;
+            font-weight:400;
+            text-align:left;
+            color:#fff;
+            padding-bottom:50px;
+        }
+        .imgs{
+            display:flex;
+            justify-content:center;
+            padding:40px;
+
+        }
+        .imgs1{
+            width:fit-content;
+            display:flex;
+            flex-flow:row;
+        }
+        .imgs img{
+            height:200px;
+            width:200px;
+            padding:10px;
+        }
+        .leftside{
+            float:left;
+            text-align:left;
+            margin-left:150px;
+        }
+        .s11 .leftside{
+            color:#fff;
+        }
+        .s11 .leftside h1{
+            font-size:1.7em;
+            margin-top:-30px;
+            font-weight:300;
+            letter-spacing:0.07em;
+            text-decoration:none;
+        }
+        section.s9{
+            height:max-content;
+        }
+        @media (min-width:1000px) and (max-width:1300px) {
+            .textpart h1{
+                font-size:1.6em;
+            }
+            .textpart p{
+                font-size:1em;
+            }
+        }
+
+        @media (min-width:750px) and (max-width:1000px) {
+            .textpart h1{
+                font-size:1.3em;
+            }
+            .textpart p{
+                font-size:0.8em;
+            }
+        }
+
+        @media (max-width:750px) {
+            h1.title{
+                font-size:8vh;
+                text-align:left;
+                margin-top:-50px;
+            }
+            .s8 .titlediv{
+                margin-top:45vh;
+                flex-flow:column;
+            }
+            .s9 .leftside{
+                margin-top:5vh;
+            }
+            .s10 .leftside{
+                margin-top:5vh;
+            }
+            .leftside{
+                margin-left:20px;
+            }
+            .leftside p{
+                font-size:2.1vh;
+                line-height:3.5vh
+            }
+            .pdiv2{
+                width:80%
+            }
+            .s11 .leftside h1{
+                margin-top:0;
+                font-size:2.2em;
+            }
+            section.s11{
+                height:max-content;
+                background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://www.pitblado.com/wp-content/uploads/2020/10/where-to-next-background-2560.jpg");
+            }
+            .h8container{
+                font-size:1.6em;
+            }
+            .textpart h1{
+                font-size:1.3em;
+            }
+            .textpart p{
+                font-size:0.9em;
+            }
+            .imagetab1{
+                flex-flow:column;
+                align-items:center;
+            }
+            .imagepart img{
+                margin-top:10vh;
+                width:30vh;
+                height:30vh;
+            }
+            .imagediv{
+                width:30vh;
+            }
+            .imagetab1:nth-child(2), .imagetab1:nth-child(3){
+                margin-top:0;
+            }
+        }
+
+    section.s8
+        .container
+            .leftside
+                .titlediv
+                    h1.title Our
+                    h1.title Services
+
+    section.s9
+        .container
+            .leftside
+                .titlediv
+                    p 
+                        | We are  
+                        b continuously advancing
+                        |  our
+                        br
+                        |  knowledge of new developments in the
+                        br
+                        | industries and areas we practice. We 
+                        b never
+                        br
+                        b stand still
+                        | ; we 
+                        b never grow stale
+                        | . It shows in
+                        br
+                        | our work.
+
+    section.s10
+        .container
+            .leftside
+                .pdiv2
+                    p For over 365 days, Minerva MUN has helped its clients navigate complex legal matters with skill and professionalism.
+                    br
+                    p Our tradition speaks volumes, but we do not stand on tradition alone. We work with our clients to deeply understand the changing nuances and market conditions that influence all key sectors of the economy. Through knowledge, passion, and diligence, we help our clients achieve their desired objectives.
+                    br
+    section.s11
+        .container
+            .leftside
+                .titlediv
+                    .h8container
+                        h8 We have expertise across 14 Areas.
+                    h1 If you can't find what you are
+                    h1(onclick="location.href='/contact'")
+                        | looking for 
+                        b.linky &#8594; Contact Us
+    section.s12
+        .container
+    include footer
+    script.
+        document.getElementById("servicesnav").classList.toggle("active");
